@@ -8,7 +8,6 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import spel.cfg.ApplicationConfig;
 import spel.entity.Computer;
 import spel.service.OrdenadorService;
-import spel.service.impl.OrdenadorServiceImpl;
 
 public class Main {
 
@@ -23,7 +22,7 @@ public class Main {
 		
 		System.out.println(computer);
 		
-		OrdenadorService ordenadorService = context.getBean("ordenadorService", OrdenadorServiceImpl.class);
+		OrdenadorService ordenadorService = context.getBean("ordenadorService", OrdenadorService.class);
 		
 		System.out.println(ordenadorService.guardarOrdenador(computer));
 	}
