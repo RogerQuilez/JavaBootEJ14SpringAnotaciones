@@ -5,12 +5,9 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 
-import org.springframework.stereotype.Repository;
-
 import spel.entity.Computer;
 import spel.repository.OrdenadorRepository;
 
-@Repository
 public class OrdenadorRepositoryImpl implements OrdenadorRepository{
 
 	@Override
