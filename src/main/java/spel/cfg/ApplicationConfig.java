@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Configuration;
 
 import spel.entity.Computer;
 import spel.entity.Monitor;
+import spel.entity.Periferico;
 import spel.entity.PlacaBase;
 import spel.entity.Procesador;
 import spel.entity.Ram;
@@ -142,6 +143,11 @@ public class ApplicationConfig {
 		teclado.setMarca(Util.getRandomMarca(Marca.getMarcaPerifericos()));
 		teclado.setTipo("Mecánico");
 		return teclado;
+	}
+	
+	@Bean
+	public List<Periferico> listaPerifericos(Monitor monitor, Teclado teclado, Raton raton) {
+		return List.of(monitor, teclado, raton);
 	}
 	
 	/* PlacaBase Object */
