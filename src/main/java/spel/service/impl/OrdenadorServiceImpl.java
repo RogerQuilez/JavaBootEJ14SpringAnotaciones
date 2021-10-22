@@ -1,13 +1,10 @@
 package spel.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import spel.entity.Computer;
 import spel.repository.OrdenadorRepository;
 import spel.service.OrdenadorService;
 
-@Service
 public class OrdenadorServiceImpl implements OrdenadorService {
 	
 	@Autowired
