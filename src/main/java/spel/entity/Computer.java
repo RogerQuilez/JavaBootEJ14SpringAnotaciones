@@ -3,6 +3,8 @@ package spel.entity;
 import java.io.Serializable;
 import java.util.List;
 
+import javax.annotation.PostConstruct;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
 import utils.Util;
@@ -30,6 +32,11 @@ public class Computer implements Serializable {
 	
 	@Autowired
 	private PlacaBase placaBase;
+	
+	@PostConstruct
+	public void init() {
+		this.precio = this.getTotalPriceComponents();
+	}
 	
 	public Computer() {
 		this.id = ++Computer.countId;

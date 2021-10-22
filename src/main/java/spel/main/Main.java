@@ -18,7 +18,6 @@ public class Main {
 		
 		context = new AnnotationConfigApplicationContext(ApplicationConfig.class);
 		Computer computer = context.getBean("computer", Computer.class);
-		computer.setPrecio(computer.getTotalPriceComponents());
 		
 		System.out.println(computer);
 		
